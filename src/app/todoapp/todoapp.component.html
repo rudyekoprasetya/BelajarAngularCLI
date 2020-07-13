@@ -1,0 +1,31 @@
+<div class="col-md">
+    <form class="container">
+        <div class="form-group lg-8">
+          <label for="input" class="sr-only">Todo</label>
+          <input type="text" class="form-control" name="task" placeholder="To Do" [(ngModel)]="task">
+        </div>
+        <div class="form-group lg-2">
+            <button type="button" class="btn btn-success" (click)="saveTask()">Confirm</button>
+        </div>
+    </form>
+</div>
+<div class="col-md">
+   <div class="container">
+       <table class="table">
+           <thead class="thead-dark">
+             <tr>
+               <th scope="col">#</th>
+               <th scope="col">Todo</th>
+               <th scope="col">Check</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr *ngFor="let row of data; let nomor=index">
+               <td scope="row">{{nomor+1}}</td>
+               <td>{{row}}</td>
+               <td align="left"><input type="checkbox" class="form-control" name="checklist" (change)="checkTask(nomor)" ></td>
+             </tr>
+           </tbody>
+       </table>
+   </div> 
+</div>

@@ -1,0 +1,19 @@
+<div class="col-lg">
+    <form class="container">
+        <div class="form-group">
+          <label for="angka1">Angka 1</label>
+          <input type="text" class="form-control" name="angka1" [(ngModel)]="angka1" value="0">
+        </div>
+        <div class="form-group">
+          <label for="angka2">Angka 2</label>
+          <input type="text" class="form-control" name="angka2" [(ngModel)]="angka2" value="0">
+        </div>
+        <button type="button" class="btn btn-block btn-primary" (click)="hitung('kali')">Kali</button>
+        <button type="button" class="btn btn-block btn-danger" (click)="hitung('bagi')">Bagi</button>
+        <button type="button" class="btn btn-block btn-warning" (click)="hitung('tambah')">Tambah</button>
+        <button type="button" class="btn btn-block btn-success" (click)="hitung('kurang')">Kurang</button>
+    </form>
+</div>
+<div class="col-lg container">
+    <h2>hasilnya {{hasil}}</h2>
+</div>
